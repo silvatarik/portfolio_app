@@ -1,0 +1,49 @@
+<section class="content">
+  <div class="block-content">
+    <h3 class="block-title">Portafolio</h3>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="filters">
+          <span>Filtros :</span>
+          <ul id="filters">
+            <li class="active" data-filter="*">Todo</li>
+            <li data-filter=".php">PHP</li>
+            <li data-filter=".c">C#</li>
+            <li data-filter=".java">JAVA</li>
+            <li data-filter=".bdo">BDO</li>
+            <li data-filter=".linux">Linux</li>
+            <li data-filter=".erp">ERP</li>
+          </ul>
+        </div>
+        <div class="portfolio-container row isotope" id="portfolio-container">
+
+          <!-- WORK START -->
+          <div *ngFor="let proyecto of cv.proyectos; let i=index">
+            <div id="port" [ngClass]="'col-md-4 col-sm-6 col-xs-12 portfolio-item '+proyecto.rol">
+              <a class="open-project" href="{{i}}">
+                <div class="portfolio-column">
+                  <div class="portfolio-hover">
+                    <div class="portfolio-content">
+                      <h2>{{proyecto.titulo}}</h2>
+                      <hr />
+                      <p>Ver mas detalles.</p>
+                    </div>
+                    <div class="portfolio-overlay"></div>
+                  </div>
+                  <img src="{{proyecto.img}}" alt="" />
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <!-- WORK -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row text-center">
+    <div class="col-md-12 btn-email">
+      <a class="btn lowercase">silvatarikt@outlook.com</a>
+    </div>
+  </div>
+</section>

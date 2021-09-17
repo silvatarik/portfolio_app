@@ -1,0 +1,105 @@
+<section class="content" id="about">
+  <div class="block-content">
+    <h3 class="block-title">Perfil</h3>
+    <h3 class="subheading">
+      ¡Hola! soy Tarik Silva Peña
+      <strong>Administrador de Sistemas & Programador BackEnd/FrontEnd</strong>
+    </h3>
+    <p class="text-justify">
+      Recién he terminado mis estudios y me encantaría poder entrar a formar
+      parte de una empresa en la que poder aplicar todos mis conocimientos.
+      Gracias a mi formación especializada, considero que puedo aportar valor y
+      seguir desarollandome en una compañia que coincida con mis valores y
+      espectativas.
+    </p>
+    <div class="info-list row">
+      <div class="col-sm-6"><span>Nombre : </span> Tarik Silva Peña</div>
+      <div class="col-sm-6">
+        <span>Fecha de Nacimiento : </span> Marzo 29, 1997
+      </div>
+      <div class="col-sm-6">
+        <span>Dirección : </span> ESPAÑA, Las Palmas de Gran Canaria, Teror.
+      </div>
+      <div class="col-sm-6"><span>Email : </span> silvatarikt@outlook.com</div>
+      <div class="col-sm-6"><span>Telefono : </span> + 34 647 632 171</div>
+      <div class="col-sm-6">
+        <span>Interes : </span> Administrador de Sistemas || Programador
+        BackEnd/FrontEnd || Freelance
+      </div>
+    </div>
+  </div>
+  <div class="block-content">
+    <h3 class="block-title">Profesional</h3>
+
+    <div *ngFor="let profex of cv.profesional">
+      <label class="progress-bar-label">{{ profex.nombre }}</label>
+      <div class="progress">
+        <div [style.width.%]="profex.porcentaje" class="progress-bar" role="progressbar"
+          attr.aria-valuenow="{{ profex.porcentaje }}" aria-valuemin="0" aria-valuemax="100">
+          <span>{{ profex.porcentaje }}%</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="block-content">
+    <h3 class="block-title">Experiencia</h3>
+    <div class="timeline experience">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="exp-holder">
+            <div *ngFor="let expex of cv.experiencia">
+              <div class="exp">
+                <div class="hgroup">
+                  <h4>
+                    <span>{{ expex.empresa }}</span> - {{ expex.cargo }}
+                  </h4>
+                  <h5>{{ expex.fecha }}</h5>
+                </div>
+                <p>{{ expex.descripcion }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="block-content">
+    <h3 class="block-title">Educación</h3>
+    <div class="timeline education">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="exp-holder">
+            <div *ngFor="let edux of cv.educacion">
+              <div class="exp">
+                <div class="hgroup">
+                  <h4>
+                    {{ edux.centro }} |
+                    <a href="{{ edux.URL }}" target="_blank"><span>Ver Certificado</span></a>
+                  </h4>
+                  <h5>{{ edux.fecha }}</h5>
+                </div>
+                <p>{{ edux.descripcion }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="block-content">
+    <h3 class="block-title">Certificados Complementarios</h3>
+    <div class="d-flex flex-md-row flex-wrap">
+      <div class="px-1">
+        <a target="_blank" href="https://drive.google.com/file/d/1h8nJSz6YbuUY7j0tRy6QcHvPcfJRE74t/view?usp=sharing" class="btn btn-download">IT ESSENTIALS</a>
+      </div>
+      <div class="px-1">
+        <a target="_blank" href="https://drive.google.com/file/d/1up8OlXywL4VmBjwQU8j6-l3NCl4KLmJ2/view?usp=sharing" class="btn btn-download">Cisco</a>
+      </div>
+    </div>
+  </div>
+  <div class="row text-center">
+    <div class="col-md-12 btn-email">
+      <a class="btn lowercase">silvatarikt@outlook.com</a>
+    </div>
+  </div>
+</section>
